@@ -1,0 +1,18 @@
+.welcomeText {
+    width: 60vh;
+    text-align: left;
+    font-size: 1vw;
+}
+
+.center {
+    margin: auto;
+    width: 75%;
+    text-align: center;
+}
+
+.rowColumn {
+    display:flex; 
+    flex-direction:row;
+    justify-content: space-between;
+    margin: 30px;
+}

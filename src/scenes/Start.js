@@ -1,22 +1,32 @@
-import React, { PureComponent } from 'react';
-import './styles/start.css'
+import React from 'react';
+import './style.css'
+import NextButton from '../components/Button';
+import Mascot from '../images/bundle.js'
 
-export const WELCOME_HEADER = 'Welcome to Calendela!';
-export const WELCOME_BODY = 'Using your Google Calendar data, we’ll give you a bird’s eye view of how your time is spent. We’ll even help you achieve your health and fitness goals with weekly planning.';
+const WelcomeText =
+    <div className='welcomeText'>
+        <h2>Welcome to Calendela!</h2>
+        <br />
+        <br />
+        <p>Using your Google Calendar data, we’ll give you a bird’s eye view of how your time is spent.<br />
+            <br />
+            <br />
+            We’ll even help you achieve your health and fitness goals with weekly planning.
+        </p>
+        <br />
+        <br />
+    </div>
 
-export default class Start extends PureComponent {
+const Start = () => (
+    <div className='rowColumn'>
+        <div>
+            {WelcomeText}
+            <NextButton
+                text='Start'
+            />
+        </div>
+        <Mascot />
+    </div>
+);
 
-    render() {
-        return (
-            <React.Fragment>
-                <div className='center'>
-                    <div className='welcomeText'>
-                        <h2>{WELCOME_HEADER}</h2>
-                        <p>{WELCOME_BODY}</p>
-                    </div>
-                </div>
-            </React.Fragment>
-        );
-    }
-
-}
+export default Start;
